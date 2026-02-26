@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ಸುಗಟೂರು ಜಾತ್ರಾ ಮಹೋತ್ಸವ 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Serif+Kannada:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --saffron: #FF6B00;
+  --gold: #FFD700;
+  --gold-light: #FFE866;
+  --crimson: #C0392B;
+  --maroon: #800020;
+  --deep-red: #6B1010;
+  --cream: #FFF8E7;
+  --ivory: #FFFDF5;
+  --brown: #5C3317;
+  --dark: #1a0800;
+  --darker: #0d0400;
+  --green: #1a6b3a;
+  --blue: #1a3a8b;
+  --purple: #6b1a8b;
+  --teal: #0d6b6b;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--darker);
+  font-family: 'Lora', serif;
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ======= NAVBAR ======= */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  background: rgba(13,4,0,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255,215,0,0.3);
+  padding: 10px 20px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap:8px;
+}
+.nav-brand {
+  font-family: 'Noto Serif Kannada', serif;
+  color: var(--gold); font-size: 0.95rem; font-weight: 700;
+}
+.nav-links { display:flex; gap:16px; list-style:none; flex-wrap:wrap; }
+.nav-links a {
+  font-family: 'Cinzel', serif; font-size:0.7rem; letter-spacing:1px;
+  color: var(--cream); text-decoration:none; text-transform:uppercase; transition:color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* ======= HERO ======= */
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(255,107,0,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(192,57,43,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(255,215,0,0.2) 0%, transparent 50%),
+    linear-gradient(160deg, #0d0200 0%, #2d0f00 25%, #5c1f00 50%, #2d0f00 75%, #0d0200 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 100px 20px 60px; position: relative; overflow:hidden;
+}
+.hero-mandala {
+  position:absolute; width:600px; height:600px; border-radius:50%;
+  border: 1px solid rgba(255,215,0,0.08);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  animation: spin 60s linear infinite;
+}
+.hero-mandala::before {
+  content:''; position:absolute; inset:40px; border-radius:50%;
+  border: 1px solid rgba(255,107,0,0.06);
+}
+@keyframes spin { to { transform:translate(-50%,-50%) rotate(360deg); } }
+
+.hero-top-bar {
+  position:absolute; top:0; left:0; right:0; height:5px;
+  background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--gold), var(--saffron), var(--maroon));
+}
+.hero-bottom-bar {
+  position:absolute; bottom:0; left:0; right:0; height:5px;
+  background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--gold), var(--saffron), var(--maroon));
+}
+
+/* Floating diyas */
+.diya { position:absolute; font-size:1.5rem; opacity:0.2; animation: floatDiya 5s ease-in-out infinite; }
+.diya:nth-child(2){left:5%;top:25%;animation-delay:0s;}
+.diya:nth-child(3){right:5%;top:35%;animation-delay:1.5s;}
+.diya:nth-child(4){left:12%;bottom:30%;animation-delay:3s;}
+.diya:nth-child(5){right:12%;bottom:25%;animation-delay:2s;}
+.diya:nth-child(6){left:25%;top:15%;animation-delay:1s;}
+.diya:nth-child(7){right:25%;top:20%;animation-delay:2.5s;}
+@keyframes floatDiya {
+  0%,100%{transform:translateY(0) rotate(0deg); opacity:0.2;}
+  50%{transform:translateY(-15px) rotate(8deg); opacity:0.35;}
+}
+
+.hero-img-frame {
+  width: 180px; height: 180px; border-radius: 50%;
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 40px rgba(255,215,0,0.4), 0 0 80px rgba(255,107,0,0.2);
+  overflow:hidden; margin-bottom:24px;
+  background: linear-gradient(135deg, #8b0000, #3d0000);
+  display:flex; align-items:center; justify-content:center;
+  font-size:5rem;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 30px rgba(255,215,0,0.4), 0 0 60px rgba(255,107,0,0.2); }
+  to   { box-shadow: 0 0 60px rgba(255,215,0,0.7), 0 0 100px rgba(255,107,0,0.4); }
+}
+
+.hero-badge {
+  font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:3px;
+  color:var(--gold); background:rgba(192,57,43,0.4); border:1px solid var(--gold);
+  padding:6px 20px; margin-bottom:16px; text-transform:uppercase;
+}
+.hero-kannada {
+  font-family:'Noto Serif Kannada',serif;
+  font-size:clamp(1.8rem,5vw,3.2rem); font-weight:700;
+  color:var(--gold); text-shadow:0 0 40px rgba(255,215,0,0.5), 2px 2px 0 var(--maroon);
+  margin-bottom:8px; line-height:1.3;
+}
+.hero-title {
+  font-family:'Cinzel Decorative',cursive;
+  font-size:clamp(1.2rem,3.5vw,2.4rem); font-weight:700;
+  color:var(--cream); text-shadow:2px 2px 0 var(--maroon), 0 0 30px rgba(255,107,0,0.5);
+  margin-bottom:16px; line-height:1.4;
+}
+.hero-date {
+  display:inline-block;
+  background:linear-gradient(135deg, var(--saffron), var(--gold));
+  color:var(--dark); font-family:'Cinzel',serif; font-weight:700;
+  font-size:clamp(0.9rem,2vw,1.2rem); padding:12px 36px;
+  box-shadow:0 4px 24px rgba(255,107,0,0.5); margin:12px 0;
+}
+.hero-loc {
+  font-family:'Cinzel',serif; font-size:0.85rem; letter-spacing:2px;
+  color:rgba(255,248,231,0.8); margin-top:8px;
+}
+.hero-divider {
+  width:180px; height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:16px auto;
+}
+.scroll-hint {
+  position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+  font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:2px;
+  color:var(--gold); animation:bounce 2s infinite;
+}
+@keyframes bounce {0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(8px);}}
+
+/* ======= COUNTDOWN ======= */
+.countdown {
+  background:linear-gradient(135deg, var(--maroon), #5c0015);
+  padding:22px 20px; text-align:center;
+  border-bottom: 2px solid rgba(255,215,0,0.3);
+}
+.cd-label {
+  font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:3px;
+  color:var(--gold-light); text-transform:uppercase; margin-bottom:12px;
+}
+.cd-units { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; }
+.cd-unit { text-align:center; }
+.cd-num {
+  display:block; font-family:'Cinzel Decorative',cursive;
+  font-size:2.8rem; font-weight:900; color:var(--gold); line-height:1;
+  text-shadow:0 0 20px rgba(255,215,0,0.6);
+}
+.cd-lbl {
+  font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:2px;
+  color:rgba(255,248,231,0.7); text-transform:uppercase;
+}
+
+/* ======= SECTION HEADERS ======= */
+.sec-header {
+  text-align:center; padding:60px 20px 10px;
+}
+.sec-title {
+  font-family:'Cinzel Decorative',cursive;
+  font-size:clamp(1.4rem,3vw,2.2rem); color:var(--gold); margin-bottom:6px;
+}
+.sec-title-kn {
+  font-family:'Noto Serif Kannada',serif;
+  font-size:clamp(1.1rem,2.5vw,1.6rem); color:var(--saffron); font-weight:600;
+  margin-bottom:16px;
+}
+.ornament {
+  width:200px; height:3px; margin:0 auto 10px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+/* ======= SWIPER SECTION ======= */
+.swiper-section {
+  background:linear-gradient(180deg,#1a0800 0%,#0d0400 100%);
+  padding:0 0 80px;
+}
+.swiper-wrapper-outer {
+  position:relative; overflow:hidden; padding:20px 0 40px;
+}
+.swiper-track {
+  display:flex; gap:20px;
+  padding:20px 60px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.swiper-track::-webkit-scrollbar { display:none; }
+.swiper-track.grabbing { cursor: grabbing; }
+
+.day-slide {
+  flex: 0 0 340px;
+  scroll-snap-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+.day-slide:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(255,107,0,0.3);
+}
+@media(max-width:600px){ .day-slide { flex:0 0 290px; } }
+
+/* Image area */
+.slide-img {
+  width:100%; height:220px; position:relative; overflow:hidden;
+}
+.slide-img img {
+  width:100%; height:100%; object-fit:cover;
+  transition: transform 0.5s ease;
+}
+.day-slide:hover .slide-img img { transform: scale(1.08); }
+.slide-img-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+}
+.slide-day-badge {
+  position:absolute; top:14px; left:14px;
+  font-family:'Cinzel Decorative',cursive; font-size:1.4rem; font-weight:900;
+  color:var(--gold); text-shadow:2px 2px 0 rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.5); backdrop-filter:blur(4px);
+  padding:4px 12px; border-radius:4px; border:1px solid rgba(255,215,0,0.4);
+}
+.slide-icon-badge {
+  position:absolute; top:14px; right:14px;
+  font-size:2rem; filter:drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
+
+/* Slide body */
+.slide-body {
+  padding:20px;
+}
+.slide-date {
+  font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:2px;
+  margin-bottom:4px;
+}
+.slide-utsava-kn {
+  font-family:'Noto Serif Kannada',serif;
+  font-size:1.05rem; font-weight:700; color:var(--cream);
+  margin-bottom:2px; line-height:1.4;
+}
+.slide-utsava-en {
+  font-family:'Cinzel',serif; font-size:0.72rem; letter-spacing:1px;
+  margin-bottom:12px; opacity:0.8;
+}
+.slide-desc {
+  font-size:0.82rem; line-height:1.7; opacity:0.8; margin-bottom:14px;
+}
+.slide-lesson {
+  border-left:3px solid var(--gold);
+  padding:10px 14px;
+  border-radius:0 8px 8px 0;
+}
+.slide-lesson-label {
+  font-family:'Cinzel',serif; font-size:0.6rem; letter-spacing:2px;
+  text-transform:uppercase; margin-bottom:5px; color:var(--gold);
+}
+.slide-lesson-text {
+  font-style:italic; font-size:0.8rem; line-height:1.6; opacity:0.9;
+}
+
+/* Theme colors */
+.theme-1  { background:linear-gradient(135deg,#3d1000,#1a0800); }
+.theme-1 .slide-date,.theme-1 .slide-utsava-en{ color:#ff8c42; }
+.theme-1 .slide-lesson{ background:rgba(255,107,0,0.12); }
+
+.theme-2  { background:linear-gradient(135deg,#1a3d00,#0a1f00); }
+.theme-2 .slide-date,.theme-2 .slide-utsava-en{ color:#6dff7e; }
+.theme-2 .slide-lesson{ background:rgba(109,255,126,0.08); border-color:#6dff7e; }
+
+.theme-3  { background:linear-gradient(135deg,#00203d,#000d1a); }
+.theme-3 .slide-date,.theme-3 .slide-utsava-en{ color:#42b8ff; }
+.theme-3 .slide-lesson{ background:rgba(66,184,255,0.08); border-color:#42b8ff; }
+
+.theme-4  { background:linear-gradient(135deg,#3d003d,#1a001a); }
+.theme-4 .slide-date,.theme-4 .slide-utsava-en{ color:#ff42f5; }
+.theme-4 .slide-lesson{ background:rgba(255,66,245,0.08); border-color:#ff42f5; }
+
+.theme-5  { background:linear-gradient(135deg,#3d2000,#1a0d00); }
+.theme-5 .slide-date,.theme-5 .slide-utsava-en{ color:#ffd042; }
+.theme-5 .slide-lesson{ background:rgba(255,208,66,0.08); border-color:#ffd042; }
+
+.theme-6  { background:linear-gradient(135deg,#003d1a,#001a0d); }
+.theme-6 .slide-date,.theme-6 .slide-utsava-en{ color:#42ffb8; }
+.theme-6 .slide-lesson{ background:rgba(66,255,184,0.08); border-color:#42ffb8; }
+
+.theme-grand { background:linear-gradient(135deg,#5c0000,#2d0000); border:2px solid var(--gold); }
+.theme-grand .slide-date,.theme-grand .slide-utsava-en{ color:var(--gold); }
+.theme-grand .slide-lesson{ background:rgba(255,215,0,0.1); }
+
+.theme-7  { background:linear-gradient(135deg,#001a3d,#00081f); }
+.theme-7 .slide-date,.theme-7 .slide-utsava-en{ color:#42b8ff; }
+.theme-7 .slide-lesson{ background:rgba(66,184,255,0.08); border-color:#42b8ff; }
+
+.theme-8  { background:linear-gradient(135deg,#1a003d,#0d001a); }
+.theme-8 .slide-date,.theme-8 .slide-utsava-en{ color:#b842ff; }
+.theme-8 .slide-lesson{ background:rgba(184,66,255,0.08); border-color:#b842ff; }
+
+.theme-9  { background:linear-gradient(135deg,#1a1a00,#0d0d00); }
+.theme-9 .slide-date,.theme-9 .slide-utsava-en{ color:#ffff42; }
+.theme-9 .slide-lesson{ background:rgba(255,255,66,0.08); border-color:#ffff42; }
+
+.theme-10 { background:linear-gradient(135deg,#3d0010,#1a0008); }
+.theme-10 .slide-date,.theme-10 .slide-utsava-en{ color:#ff4268; }
+.theme-10 .slide-lesson{ background:rgba(255,66,104,0.08); border-color:#ff4268; }
+
+.theme-fin{ background:linear-gradient(135deg,#3d1500,#1a0800); border:2px solid var(--saffron); }
+.theme-fin .slide-date,.theme-fin .slide-utsava-en{ color:var(--saffron); }
+.theme-fin .slide-lesson{ background:rgba(255,107,0,0.12); }
+
+/* Nav arrows */
+.swiper-nav {
+  display:flex; justify-content:center; align-items:center; gap:20px;
+  padding:10px 0 20px;
+}
+.swiper-btn {
+  width:50px; height:50px; border-radius:50%;
+  background:linear-gradient(135deg, var(--saffron), var(--gold));
+  border:none; color:var(--dark); font-size:1.3rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:transform 0.2s, box-shadow 0.2s;
+  box-shadow:0 4px 16px rgba(255,107,0,0.4);
+  font-weight:900;
+}
+.swiper-btn:hover { transform:scale(1.1); box-shadow:0 6px 24px rgba(255,107,0,0.6); }
+.swiper-dots { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; max-width:300px; }
+.dot {
+  width:8px; height:8px; border-radius:50%;
+  background:rgba(255,215,0,0.3); cursor:pointer;
+  transition:all 0.3s ease; border:none;
+}
+.dot.active { background:var(--gold); transform:scale(1.4); }
+.slide-counter {
+  font-family:'Cinzel',serif; font-size:0.8rem; color:var(--gold);
+  letter-spacing:1px; text-align:center; margin-bottom:8px;
+}
+
+/* ======= GRAND EVENT BANNER ======= */
+.grand-banner {
+  margin:0 20px 40px;
+  background:linear-gradient(135deg,#5c0000,#3d0000);
+  border:2px solid var(--gold);
+  border-radius:12px; overflow:hidden;
+  box-shadow:0 8px 40px rgba(255,215,0,0.2);
+}
+.grand-banner-inner {
+  display:grid; grid-template-columns:1fr 1fr; gap:0;
+}
+@media(max-width:700px){ .grand-banner-inner{ grid-template-columns:1fr; } }
+.grand-img {
+  height:280px; overflow:hidden;
+}
+.grand-img img { width:100%; height:100%; object-fit:cover; }
+.grand-content {
+  padding:30px 24px; display:flex; flex-direction:column; justify-content:center;
+}
+.grand-label {
+  font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:4px;
+  color:var(--gold); text-transform:uppercase; margin-bottom:8px;
+}
+.grand-title {
+  font-family:'Cinzel Decorative',cursive;
+  font-size:clamp(1.2rem,2.5vw,1.8rem); color:var(--gold); margin-bottom:6px;
+}
+.grand-title-kn {
+  font-family:'Noto Serif Kannada',serif;
+  font-size:1.1rem; color:var(--cream); margin-bottom:12px; font-weight:600;
+}
+.grand-date-tag {
+  display:inline-block;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--dark); font-family:'Cinzel',serif; font-weight:700;
+  font-size:0.85rem; padding:8px 20px; margin-bottom:12px; border-radius:2px;
+}
+.grand-desc { font-size:0.85rem; line-height:1.8; opacity:0.8; }
+
+/* ======= RAMAYANA SECTION ======= */
+.ramayana-section {
+  background:var(--ivory); color:var(--brown);
+  padding:60px 20px;
+}
+.ramayana-section .sec-title { color:var(--maroon); }
+.ramayana-section .sec-title-kn { color:var(--saffron); }
+.ramayana-section .ornament {
+  background:linear-gradient(90deg,transparent,var(--saffron),transparent);
+}
+
+.rama-cards {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px;
+  max-width:1100px; margin:40px auto 0;
+}
+.rama-card {
+  border-radius:12px; overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.rama-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(0,0,0,0.15); }
+.rama-card-img { height:200px; overflow:hidden; position:relative; }
+.rama-card-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+.rama-card:hover .rama-card-img img { transform:scale(1.08); }
+.rama-card-img-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.6) 100%);
+}
+.rama-card-body {
+  background:white; padding:20px;
+}
+.rama-card-kanda {
+  font-family:'Cinzel',serif; font-size:0.65rem; letter-spacing:2px;
+  color:var(--saffron); text-transform:uppercase; margin-bottom:6px;
+}
+.rama-card-title {
+  font-family:'Cinzel Decorative',cursive; font-size:1rem; color:var(--maroon); margin-bottom:8px;
+}
+.rama-card-text { font-size:0.88rem; line-height:1.8; color:#5c3a20; margin-bottom:12px; }
+.rama-card-quote {
+  background:#fff3e0; border-left:3px solid var(--gold);
+  padding:10px 14px; font-style:italic; font-size:0.82rem; color:var(--brown);
+  border-radius:0 4px 4px 0;
+}
+
+/* ======= MAP SECTION ======= */
+.map-section {
+  background:linear-gradient(180deg,#0d0400,#1a0800);
+  padding:60px 20px;
+}
+.map-container {
+  max-width:900px; margin:40px auto 0;
+  border:2px solid rgba(255,215,0,0.3); border-radius:12px; overflow:hidden;
+  box-shadow:0 8px 40px rgba(255,107,0,0.2);
+}
+.map-container iframe {
+  width:100%; height:400px; border:none; display:block;
+}
+.map-info {
+  background:rgba(255,248,231,0.05); padding:24px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;
+}
+.map-info-item { display:flex; align-items:flex-start; gap:12px; }
+.map-info-icon { font-size:1.5rem; flex-shrink:0; margin-top:2px; }
+.map-info-text h4 {
+  font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:1px;
+  color:var(--gold); text-transform:uppercase; margin-bottom:4px;
+}
+.map-info-text p { font-size:0.85rem; line-height:1.6; color:rgba(255,248,231,0.8); }
+.map-btn {
+  display:inline-flex; align-items:center; gap:8px;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--dark); font-family:'Cinzel',serif; font-weight:700;
+  font-size:0.85rem; padding:12px 28px; border-radius:4px;
+  text-decoration:none; margin:20px auto; display:flex; width:fit-content;
+  box-shadow:0 4px 20px rgba(255,107,0,0.4);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.map-btn:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,107,0,0.6); }
+
+/* ======= INFO CARDS ======= */
+.info-section {
+  background:linear-gradient(135deg,#1a0800,#0d0400);
+  padding:60px 20px;
+}
+.info-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px; max-width:1000px; margin:40px auto 0;
+}
+.info-card {
+  background:rgba(255,248,231,0.04);
+  border:1px solid rgba(255,215,0,0.2); border-radius:10px;
+  padding:24px 20px; text-align:center;
+  transition:background 0.3s, transform 0.3s;
+}
+.info-card:hover { background:rgba(255,107,0,0.08); transform:translateY(-4px); }
+.info-card-icon { font-size:2.2rem; margin-bottom:12px; }
+.info-card h3 {
+  font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:2px;
+  color:var(--gold); text-transform:uppercase; margin-bottom:8px;
+}
+.info-card p { font-size:0.85rem; line-height:1.7; color:rgba(255,248,231,0.75); }
+
+/* ======= FOOTER ======= */
+footer {
+  background:#000; padding:40px 20px; text-align:center;
+  border-top:4px solid; border-image:linear-gradient(90deg,var(--maroon),var(--gold),var(--saffron),var(--gold),var(--maroon)) 1;
+}
+.footer-title {
+  font-family:'Noto Serif Kannada',serif;
+  font-size:1.3rem; color:var(--gold); margin-bottom:6px;
+}
+.footer-sub {
+  font-family:'Cinzel',serif; font-size:0.75rem; letter-spacing:2px;
+  color:var(--saffron); margin-bottom:16px;
+}
+.footer-divider {
+  width:200px; height:1px; margin:16px auto;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.footer-info { font-size:0.82rem; color:rgba(255,248,231,0.4); line-height:1.9; }
+.footer-mantra { font-style:italic; color:rgba(255,215,0,0.5); margin-top:12px; font-size:0.9rem; }
+
+/* ======= MOBILE SWIPE HINT ======= */
+.swipe-hint {
+  text-align:center; padding:8px; color:rgba(255,215,0,0.6);
+  font-family:'Cinzel',serif; font-size:0.7rem; letter-spacing:2px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
+
+/* GRAND badge on card */
+.grand-star {
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--dark); font-family:'Cinzel',serif; font-size:0.6rem;
+  letter-spacing:2px; padding:3px 10px; border-radius:2px;
+  font-weight:700; text-transform:uppercase; margin-bottom:6px;
+  display:inline-block;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">🪔 ಸುಗಟೂರು ಜಾತ್ರಾ ಮಹೋತ್ಸವ 2026</div>
+  <ul class="nav-links">
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#ramayana">Ramayana</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#info">Info</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top-bar"></div>
+  <div class="hero-mandala"></div>
+  <span class="diya">🪔</span><span class="diya">🌸</span>
+  <span class="diya">🪷</span><span class="diya">🌺</span>
+  <span class="diya">🪔</span><span class="diya">✨</span>
+
+  <div class="grand-img">
+        <img src="https://as2.ftcdn.net/v2/jpg/05/75/88/25/1000_F_575882581_eDC425Tdfsp6BtZanrpG9gjMjgaSzBKm.jpg"
+          alt="Rama Chariot" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#5c0000,#2d0000)'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:280px;font-size:5rem;\'>🎡</div>'">
+      </div>
+  <div class="hero-badge">✦ Kolar Taluk · Karnataka · 2026 ✦</div>
+  <div class="hero-kannada">ಶ್ರೀ ಕೋದಂಡ ರಾಮಸ್ವಾಮಿ ದೇವರ ಬ್ರಹ್ಮ ರಥೋತ್ಸವ </div>
+  <div class="hero-kannada">ಶ್ರೀ ಗಂಗಾಧರೇಶ್ವರ ಸ್ವಾಮಿ ದೇವರ ರಾವಣ ವಾಹನೋತ್ಸವ 2026</div>
+  <div class="hero-divider"></div>
+  <div class="hero-date">⚜ 25 February — 9 March 2026 · 13 Days ⚜</div>
+  <div class="hero-loc">📍 Sugaturu Village, Kolar Taluk, Karnataka</div>
+  <div class="hero-bottom-bar"></div>
+  <div class="scroll-hint">↓ SWIPE THROUGH EVENTS ↓</div>
+</section>
+
+
+
+
+<!-- GRAND BRAHMARATHOTSAVA BANNER -->
+<div class="swiper-section">
+<div style="padding:40px 20px 0; max-width:960px; margin:0 auto;">
+  <div class="grand-banner">
+    <div class="grand-banner-inner">
+      <div class="grand-img">
+        <img src="https://iili.io/qfMOfJ2.jpg"
+          alt="Rama Chariot" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#5c0000,#2d0000)'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:280px;font-size:5rem;\'>🎡</div>'">
+      </div>
+      <div class="grand-content">
+        <div class="grand-label">⭐ Crown Event · 03 March 2026</div>
+        <div class="grand-title">Brahmarathotsava</div>
+        <div class="grand-title-kn">ಬ್ರಹ್ಮರಥೋತ್ಸವ — ಕರ್ನಾಟಕ ಸರ್ಕಾರದಿಂದ</div>
+        <div class="grand-date-tag">📅 Tuesday 03 March 2026 · 11:00 AM</div>
+        <p class="grand-desc">The magnificent Grand Chariot Festival organized with Karnataka Government support. Thousands of devotees witness Lord Rama's magnificent procession through Sugaturu.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GRAND Raavana Vahanotsava BANNER -->
+<div class="swiper-section">
+<div style="padding:40px 20px 0; max-width:960px; margin:0 auto;">
+  <div class="grand-banner">
+    <div class="grand-banner-inner">
+      <div class="grand-img">
+        <img src="https://iili.io/qfM8mn1.jpg"
+          alt="Rama Chariot" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#5c0000,#2d0000)'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:280px;font-size:5rem;\'>🎡</div>'">
+      </div>
+      <div class="grand-content">
+        <div class="grand-label">⭐ Crown Event · 09 March 2026</div>
+        <div class="grand-title">Raavana Vahanotsava</div>
+        <div class="grand-title-kn">ಶ್ರೀ ಗಂಗಾಧರೇಶ್ವರ ಸ್ವಾಮಿ ದೇವರ ರಾವಣ ವಾಹನೋತ್ಸವ</div>
+        <div class="grand-date-tag">📅 MONDAY 09 March 2026 · 09:00 PM</div>
+        <p class="grand-desc">ರಾವಣ ವಾಹನೋತ್ಸವವು ಈ ಕ್ಷೇತ್ರದ ಅತ್ಯಂತ ವಿಶಿಷ್ಟ ಮತ್ತು ವೈಭವಯುತ ಉತ್ಸವಗಳಲ್ಲಿ ಒಂದಾಗಿದೆ. ರಾವಣನು ಶಿವ ಭಕ್ತ ಮತ್ತು ಮಹಾ ತಪಸ್ವಿ ಆಗಿದ್ದರಿಂದ, ರಾವಣ ವಾಹನ ಎಂದರೆ ಸ್ವತಃ ರಾವಣನೇ ಶಿವನನ್ನು ಹೊತ್ತು ನಡೆಯುತ್ತಾನೆ ಎಂಬ ಭಾವ.ಶಿವ ದೇವಸ್ಥಾನಗಳಲ್ಲಿ ರಾವಣನ ವಾಹನದ ಮೇಲೆ ದೇವರ ಉತ್ಸವ ಮೂರ್ತಿಯನ್ನು ಮೆರವಣಿಗೆ ನಡೆಸುವ ಸಂಪ್ರದಾಯ ವಿಶೇಷ ಮಹತ್ವ ಪಡೆಯುತ್ತದೆ, ಇದು ಭಕ್ತಿ, ಶರಣಾಗತಿ ಮತ್ತು ಶಿವನ ಮಹಿಮೆಯನ್ನು ಸಂಕೇತಿಸುತ್ತದೆ.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CULTURAL PROGRAM ===== -->
+ <div class="swiper-section">
+<div style="padding:40px 20px 0; max-width:960px; margin:0 auto;">
+  <div class="grand-banner">
+    <div class="grand-banner-inner">
+      <div class="grand-img">
+        <img src="https://iili.io/qfME6np.jpg"
+          alt="Rama Chariot" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#5c0000,#2d0000)'; this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:280px;font-size:5rem;\'>🎡</div>'">
+      </div>
+      <div class="grand-content">
+        <div class="grand-label">⭐ Crown Event · 09 March 2026</div>
+        <div class="grand-title">ರಸಮಂಜರಿ ಕಾರ್ಯಕ್ರಮ</div>
+        <div class="grand-title-kn">🎭 ವಿಶೇಷ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ</div>
+        <div class="cultural-name">ಗೋನಾ ಸ್ವಾಮಿ</div>
+        <div class="cultural-desc">ಅಂತರಾಷ್ಟ್ರೀಯ ಜಾನಪದ ಕಲಾವಿದರು ತಂಡದವರಿಂದ<br>
+        <div class="grand-date-tag">📅 MONDAY 09 March 2026 · 09:00 PM</div>
+        <p class="grand-desc">ಅಂತರಾಷ್ಟ್ರೀಯ ಜಾನಪದ ಕಲಾವಿದರು ತಂಡದವರಿಂದ ವಿಶೇಷ ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ</p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+<!-- SCHEDULE SWIPER -->
+<div class="sec-header" id="schedule">
+  <div class="sec-title">13-Day Festival Schedule</div>
+  <div class="sec-title-kn">ಹದಿಮೂರು ದಿನಗಳ ಕಾರ್ಯಕ್ರಮ — ಸ್ವೈಪ್ ಮಾಡಿ</div>
+  <div class="ornament"></div>
+</div>
+<div class="swipe-hint">👈 SWIPE LEFT / RIGHT TO BROWSE ALL 13 DAYS 👉</div>
+<div class="slide-counter"><span id="current-slide">1</span> / 13</div>
+
+<div class="swiper-wrapper-outer">
+<div class="swiper-track" id="swiperTrack">
+
+  <!-- DAY 1 -->
+  <div class="day-slide theme-1">
+    <div class="slide-img">
+      <img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2025/11/25/1868000-mixcollage-25-nov-2025-01-25-pm-967.jpg?im=Resize=(700,400)"
+        alt="Day 1 - Sri Rama"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#8b4000,#3d1500)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 01</div>
+      <div class="slide-icon-badge">🏳️</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">25 FEB 2026 · WEDNESDAY · NAVAMI</div>
+      <div class="slide-utsava-kn">ಅಂಕುರಾರ್ಪಣ · ಧ್ವಜಾರೋಹಣ</div>
+      <div class="slide-utsava-en">Ankurarpana · Flag Hoisting (Dhwajaroha)</div>
+      <p class="slide-desc">Sacred seeds sown (Ankura) + festival flag hoisted on the temple chariot street. Special pujas, abhishekas by SN Srineevas, Venkatachala, M Venkatachala, SV Sreenath, Reddappa, VCG</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"Every great journey begins with a righteous intention. As Sri Rama set forth from Ayodhya with dharma, we begin with devotion." — Bala Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-slide theme-2">
+    <div class="slide-img">
+      <img src="https://www.shutterstock.com/shutterstock/photos/2719018499/display_1500/stock-photo-oil-painting-artistic-image-of-a-giant-lord-ram-wearing-a-yellow-and-orange-marigold-garland-2719018499.jpg"
+        alt="Simhavahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#005500,#002200)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 02</div>
+      <div class="slide-icon-badge">🦁</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">26 FEB 2026 · THURSDAY · DASHAMI</div>
+      <div class="slide-utsava-kn">ಸಿಂಹವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Simhavahanotsava — Lion Vehicle Festival</div>
+      <p class="slide-desc">Lord Ramaswami rides the Lion (Simha) vahana — symbol of divine power and royal courage and organise by Seetharamayya, Acchappa, Narayanappa, S R Varadappa, S Manjunath, Shyamanna & community join the procession.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"Courage is choosing dharma over comfort. As Rama faced Ravana fearlessly, true strength lies in righteousness." — Yuddha Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-slide theme-3">
+    <div class="slide-img">
+      <img src="https://www.shutterstock.com/image-photo/ram-lalla-ayodhya-image-ramlala-600w-2431596649.jpg"
+        alt="Hanuman Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#001a5c,#00081f)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 03</div>
+      <div class="slide-icon-badge">🐒</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">27 FEB 2026 · FRIDAY · EKADASHI</div>
+      <div class="slide-utsava-kn">ಹನುಮಂತವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Hanumantavahanotsava — Hanuman Vehicle Festival</div>
+      <p class="slide-desc">Lord Rama carried on divine Hanuman vahana — most beloved procession oranised by Panchanana,Sridharacharya, Vishwanathacharyaru, Sri Harsha, Hariprasad & Sudamacharyaru & Family.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"Hanuman's pure devotion is the ideal path. Those who serve with love and surrender achieve the highest." — Sundara Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-slide theme-4">
+    <div class="slide-img">
+      <img src="https://cdn.shopify.com/s/files/1/0525/5285/9819/files/247_1024x1024.jpg?v=1732174078"
+        alt="Shesha Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#3d003d,#1a001a)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 04</div>
+      <div class="slide-icon-badge">🐍</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">28 FEB 2026 · SATURDAY · DWADASHI</div>
+      <div class="slide-utsava-kn">ಶೇಷವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Sheshavahanotsava — Cosmic Serpent Vehicle Festival</div>
+      <p class="slide-desc">Lord Rama on Adishesha — the divine cosmic serpent representing eternity and cosmic sustenance. Large Aaryaveshya community & Vaasavi Sangha along with 10+ families participate in service.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"As Shesha eternally supports the cosmos, a righteous leader eternally supports his people. Service to others is service to the Divine." — Ayodhya Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-slide theme-5">
+    <div class="slide-img">
+      <img src="https://vedicfeed.com/wp-content/uploads/2019/12/Rama-Sita-Marriage.jpg"
+        alt="Kalyanosava"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#5c3d00,#2d1f00)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 05</div>
+      <div class="slide-icon-badge">💍</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">01 MAR 2026 · SUNDAY · TRAYODASHI</div>
+      <div class="slide-utsava-kn">ಕಲ್ಯಾಣೋತ್ಸವ + ರಾತ್ರಿ ಗರುಡ ವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Kalyanosava (Wedding) + Night Garuda Vahanotsava</div>
+      <p class="slide-desc">Divine wedding of Lord Rama & Sita reenacted with joy by SV Narayanamurthy, K Muniramayya, Ramaswami, Vijaykumar, Manju, Chandrappa and families. Evening: Garuda (divine eagle) Vahanotsava under stars organised by DaaseGowda, Sreenivasa Gowda, Ramegowda,KempeGowda, Sandeep Kumar, Shankar and families</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"Sita is My very soul, My dharma, and My truth. To honor one's beloved is to honor the sacred bond of dharma." — Bala Kanda, Sita Swayamvara</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day-slide theme-6">
+    <div class="slide-img">
+      <img src="https://news.tirumala.org/wp-content/uploads/2015/03/Gaja-Vahanam-2-copy.jpg"
+        alt="Gaja Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#003d1a,#001a0d)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 06</div>
+      <div class="slide-icon-badge">🐘</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">02 MAR 2026 · MONDAY · CHATURDASHI</div>
+      <div class="slide-utsava-kn">ಗಜವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Gajavahansotsava — Royal Elephant Vehicle Festival</div>
+      <p class="slide-desc">Lord Rama on the royal Elephant vahana — symbol of wisdom and auspiciousness orgnised by N. Krishnapparaju, Venkataramanraju, Janardhanraju & Vinodharaju & Families join in service.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"True wisdom is knowing when to act and when to wait. Patience combined with right action — this is the path of the wise ruler." — Ayodhya Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 7 — GRAND -->
+   
+  <div class="day-slide theme-grand">
+    <div class="slide-img">
+      <img src="https://iili.io/qfVFwXV.jpg"
+        alt="Brahmarathotsava"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#8b0000,#3d0000)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 07</div>
+      <div class="slide-icon-badge">🎡</div>
+    </div>
+    <div class="slide-body">
+      <div class="grand-star">⭐ GRAND CHARIOT DAY</div>
+      <div class="slide-date">03 MAR 2026 · TUESDAY · 11:00 AM</div>
+      <div class="slide-utsava-kn">ಬ್ರಹ್ಮರಥೋತ್ಸವ — ಕರ್ನಾಟಕ ಸರ್ಕಾರದಿಂದ</div>
+      <div class="slide-utsava-en">BRAHMARATHOTSAVA · Gangadreshwara Utsava · Night Chitra Gopu Rath</div>
+      <p class="slide-desc">Karnataka Govt sponsored Grand Chariot at 11 AM. Morning Gangadreshwara Utsava by LingeGowda, Srineevasa Gowda, Venkatachalapati . Night Chitra Gopu Rathotsava by Ramachandre Gowda, Srineevasa Gowda,SV GaudeGowda, SV Manoj.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message — Chariot of Dharma</div>
+        <div class="slide-lesson-text">"The true chariot of victory is made of truth, courage, and righteousness. Ride that chariot and no enemy can defeat you." — Yuddha Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 8 -->
+  <div class="day-slide theme-7">
+    <div class="slide-img">
+      <img src="https://img.freepik.com/premium-photo/majestic-painting-hindu-god-rama-riding-his-white-horse_1282444-168646.jpg"
+        alt="Ashwa Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#001a3d,#00081f)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 08</div>
+      <div class="slide-icon-badge">🐎</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">04 MAR 2026 · WEDNESDAY · PADYAMI</div>
+      <div class="slide-utsava-kn">ಅಶ್ವವಾಹನೋತ್ಸವ · ಶಯನೋತ್ಸವ · ಪಾವರ್ತೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Ashwavahanotsava (Horse) + Shayanosava + Pavartotsava</div>
+      <p class="slide-desc">Lord Rama on splendid Horse — Kshatriya valor. Shayanosava (sacred resting) and Swing festival also conducted by D. Munegouda family and Sri Ramegouda family lead service. Shayanotsava by D PilleGowda, Nagesh, S Amaranath, Sreenivasa, Vishalamma, Shanthamma & Families, Paarvatotsava by SV Govindappa, SD Gopalakrishna, SV Ravichnadra & Family</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"A warrior's strength lies not in weapons but in moral resolve. Rama chose exile over injustice — honor is mightier than any sword." — Ayodhya Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 9 -->
+  <div class="day-slide theme-8">
+    <div class="slide-img">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiygM1qWDfrSDgKwo1yEZkLxIKEOKiZBwGJFsfFLHjMewYslc_4tQ27f9piFLakER3EC2peNALpFEjGfeOTYnQyeAXgYG8rQL2BqoUOsmXk__5U6K65LuKQ2YGDpF66Ve9NC5DZaFXLE1TW/s2048/HAMSA+VAHANAM1.jpg"
+        alt="Hamsa Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#1a003d,#0d001a)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 09</div>
+      <div class="slide-icon-badge">🦢</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">05 MAR 2026 · THURSDAY · BIDIGE</div>
+      <div class="slide-utsava-kn">ಹಂಸವಾಹನೋತ್ಸವ · ವಸಂತೋತ್ಸವ ಪಾನಕ ಪೂಜೆ</div>
+      <div class="slide-utsava-en">Hamsavahanotsava (Swan) + Vasantotsava + Panaka Puje</div>
+      <p class="slide-desc">Lord Rama on Swan (Hamsa) — pure knowledge and discernment, organised by SN Nagaraja Gowda, SV Narayana Gowda, SV Manjunath Gowda,Narayana Swami, SN NanjeGowda, SN Ramesh Family. Vasantotsava Spring festival with sacred Panaka drink offering LingeGowda, Sreenivasa Gowda, Venkata Chalapati Family</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"Discernment is the swan that separates truth from falsehood. Always choose the path of truth." — Kishkindha Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 10 -->
+  <div class="day-slide theme-9">
+    <div class="slide-img">
+      <img src="https://i0.wp.com/archai.co.in/wp-content/uploads/2023/03/IMG-20230318-WA0021-1.jpg?resize=1200%2C801&ssl=1"
+        alt="Pushpa Pallaki"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#1a1a00,#0d0d00)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 10</div>
+      <div class="slide-icon-badge">🎪</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">06 MAR 2026 · FRIDAY · TADIGE</div>
+      <div class="slide-utsava-kn">ಪ್ರುಷ್ಠ ಪಲ್ಲಕಿ ಉತ್ಸವ</div>
+      <div class="slide-utsava-en">Prushtha Pallaki Utsava — Reverse-Facing Palanquin Procession</div>
+      <p class="slide-desc">Unique procession: Lord Rama in palanquin facing backwards — the Lord's protective gaze upon devotees following behind. by Gudegouda, Krishnappa, Motegouda, Shankar, Naanappa, Madhu & large family groups participate.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"I never abandon those who take refuge in Me. Even as I walk ahead, My gaze of protection always remains upon My devotees." — Yuddha Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 11 -->
+  <div class="day-slide theme-10">
+    <div class="slide-img">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOn5_-w8fPfQ3YioRCe71tcHkWQh-yq_l-SQ&s"
+        alt="Dolotsava"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#3d0010,#1a0008)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 11</div>
+      <div class="slide-icon-badge">🎠</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">07 MAR 2026 · SATURDAY · CHATURTHI</div>
+      <div class="slide-utsava-kn">ಡೋಲೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Dolotsava — Sacred Swing Festival</div>
+      <p class="slide-desc">Lord Rama & Sita placed on a beautifully decorated swing to devotional songs and music By Nanjundappa, Shriramappa, Someshekhargouda, Erapappa, Nagabhushana, Suresh, Ashwatappa & family team serve.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message</div>
+        <div class="slide-lesson-text">"In joy and sorrow, in life's swinging fortunes — remain steady in devotion. The swing of dharma always rests in God's grace." — Aranya Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 12 -->
+  <div class="day-slide theme-5">
+    <div class="slide-img">
+      <img src="https://www.tallengestore.com/cdn/shop/products/Ramapattabhishek-CoronationOfLordRama-RajaRaviVarmaVintageRamayanPainting_1.jpg?v=1630052261"
+        alt="Pattabhisheka"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#5c3d00,#2d1f00)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 12</div>
+      <div class="slide-icon-badge">👑</div>
+    </div>
+    <div class="slide-body">
+      <div class="slide-date">08 MAR 2026 · SUNDAY · PANCHAMI</div>
+      <div class="slide-utsava-kn">ಶ್ರೀರಾಮ ಪಟ್ಟಾಭಿಷೇಕ ಮತ್ತು ಉತ್ಸವ</div>
+      <div class="slide-utsava-en">Sri Rama Pattabhisheka Utsava — Royal Coronation Ceremony</div>
+      <p class="slide-desc">Sacred coronation of Lord Rama reenacted in full glory. Sugaturu Aadijambhava Janangada devotees actively participate. Royal Powerflute Friends & Avinash Melodies Orchestra performance with Night Prasada.</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message — Ramarajya</div>
+        <div class="slide-lesson-text">"In Ramarajya, no subject suffers hunger or injustice. A king exists only to serve his people — their happiness is his dharma." — Uttara Kanda</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 13 — FINALE -->
+  <div class="day-slide theme-fin">
+    <div class="slide-img">
+      <img src="https://iili.io/qfVzHqx.md.jpg"
+        alt="Ravana Vahana"
+        onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#8b2000,#3d0f00)'; this.style.display='none';">
+      <div class="slide-img-overlay"></div>
+      <div class="slide-day-badge">Day 13</div>
+      <div class="slide-icon-badge">🏹</div>
+    </div>
+    <div class="slide-body">
+      <div class="grand-star">🏹 GRAND Event · NIGHT 9:00 PM</div>
+      <div class="slide-date">09 MAR 2026 · MONDAY · SHASHTI</div>
+      <div class="slide-utsava-kn">ರಾವಣ ವಾಹನ ಪ್ರತಿಷ್ಠೆ + ರಾವಣ ವಾಹನೋತ್ಸವ</div>
+      <div class="slide-utsava-en">Ravana Vahana Pratishthe + Grand Ravana Vahanotsava at 9:00 PM</div>
+      <p class="slide-desc">Grand Event Morning: Ravana Vahana consecration (Pratishthe puje). Night 9PM: Lord Gangadareshwara on Ravana Vahana — Bhakti Vijaya Yaatre. Agamikaru: A.P. Ramanath Deekshitaru. Pradhan Archakaru: Rameshababu. Gona swami, International Artists & Team's musical program in the night. Contact: 9620720295</p>
+      <div class="slide-lesson">
+        <div class="slide-lesson-label">🪷 Sri Rama's Message — Victory of Dharma</div>
+        <div class="slide-lesson-text">"Evil may amass great power, but dharma will always prevail. Ramarajya is the eternal kingdom of justice that lives in every righteous heart." — Yuddha Kanda</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- swiper-track -->
+</div><!-- swiper-wrapper-outer -->
+
+<!-- SWIPER NAVIGATION -->
+<div class="swiper-nav">
+  <button class="swiper-btn" id="prevBtn" onclick="slideNav(-1)">←</button>
+  <div class="swiper-dots" id="dotsContainer"></div>
+  <button class="swiper-btn" id="nextBtn" onclick="slideNav(1)">→</button>
+</div>
+
+</div><!-- swiper-section -->
+
+<!-- RAMAYANA SECTION -->
+<section class="ramayana-section" id="ramayana">
+  <div class="sec-header" style="padding-top:0;">
+    <div class="sec-title">Sri Rama's Journey & Life Teachings</div>
+    <div class="sec-title-kn">ಶ್ರೀ ರಾಮನ ಜೀವನ ಸಂದೇಶ — ರಾಮಾಯಣ</div>
+    <div class="ornament"></div>
+  </div>
+
+  <div class="rama-cards">
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-beb36e1025a33a1cab548dd6027aa84f-lq"
+          alt="Bala Kanda"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#ff6b00,#c0392b)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>🏹</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Bala Kanda · Book 1</div>
+        <div class="rama-card-title">Divine Birth & Breaking the Bow</div>
+        <p class="rama-card-text">Born to Dasharatha in Ayodhya, Sri Rama learned sacred arts, protected sages, and broke the Shiva Dhanush at Mithila to win Sita's hand.</p>
+        <div class="rama-card-quote">🪷 "Learn from elders, respect teachers, and approach every challenge with a calm and focused mind." — Guru Vishwamitra to Rama</div>
+      </div>
+    </div>
+
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://cdn.shopify.com/s/files/1/0825/8404/3804/files/Timeless_Lessons_from_Lord_Rama_s_Life.png?v=1767697877"
+          alt="Ayodhya Kanda"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#8b0000,#3d0000)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>🌳</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Ayodhya Kanda · Book 2</div>
+        <div class="rama-card-title">Noble Exile — Dharma Above Throne</div>
+        <p class="rama-card-text">Rama voluntarily accepted 14 years of exile to honor his father's word — choosing dharma over the greatest kingdom. His sacrifice became humanity's greatest lesson.</p>
+        <div class="rama-card-quote">🪷 "My father's honor is more precious to me than any kingdom." — Sri Rama to Lakshmana</div>
+      </div>
+    </div>
+
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLe8ujimgM9-YOWXUoM2ePBuDxR3257TQOg&s"
+          alt="Sundara Kanda"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#ff6b00,#8b3a00)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>🐒</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Sundara Kanda · Book 5</div>
+        <div class="rama-card-title">Hanuman's Devotion — Power of Bhakti</div>
+        <p class="rama-card-text">Hanuman leaped the ocean to Lanka with pure devotion, found Sita, and brought hope. Rama's tearful gratitude revealed how God values sincere love above all.</p>
+        <div class="rama-card-quote">🪷 "Nothing is impossible for one who carries the name of Rama with true faith." — Sundara Kanda</div>
+      </div>
+    </div>
+
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://assets.thehansindia.com/h-upload/2024/10/29/1493045-lord-rama.webp"
+          alt="Yuddha Kanda"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#c0392b,#6b1010)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>⚔️</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Yuddha Kanda · Book 6</div>
+        <div class="rama-card-title">Battle of Lanka — Triumph of Truth</div>
+        <p class="rama-card-text">Rama built a bridge across the ocean and led the Vanara army to Lanka. Ravana's fall — despite great power — proved that adharma always collapses before truth.</p>
+        <div class="rama-card-quote">🪷 "Every arrow I release carries the weight of truth." — Sri Rama before the final battle</div>
+      </div>
+    </div>
+
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5-O6pr7u904WCbvBWvqw6p2mdvPnk0K0fWg&s"
+          alt="Uttara Kanda"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#ffd700,#ff6b00)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>👑</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Uttara Kanda · Book 7</div>
+        <div class="rama-card-title">Ramarajya — The Golden Age</div>
+        <p class="rama-card-text">After coronation, Rama established Ramarajya — every citizen lived in joy and prosperity. He placed public welfare above personal happiness — the eternal standard of leadership.</p>
+        <div class="rama-card-quote">🪷 "Build Ramarajya in your own soul first — through truth and compassion." — Uttara Kanda</div>
+      </div>
+    </div>
+
+    <div class="rama-card">
+      <div class="rama-card-img">
+        <img src="https://www.indiadivine.org/wp-content/uploads/2018/10/Vontimitta-4.jpg"
+          alt="Kodanda Rama"
+          onerror="this.src=''; this.parentElement.style.background='linear-gradient(135deg,#1a6b3a,#0d3320)'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:200px;font-size:4rem;\'>🏹</div>'">
+        <div class="rama-card-img-overlay"></div>
+      </div>
+      <div class="rama-card-body">
+        <div class="rama-card-kanda">Sri Kodanda Rama · Sugaturu</div>
+        <div class="rama-card-title">The Divine Archer of Kolar</div>
+        <p class="rama-card-text">Sri Kodanda Ramaswami — the presiding deity of Sugaturu, seated on the banks of Palaar River — is worshipped as the embodiment of righteousness, protection, and infinite grace.</p>
+        <div class="rama-card-quote">🪷 "ರಾಮೋ ವಿಗ್ರಹವಾನ್ ಧರ್ಮಃ — Rama is the embodiment of Dharma" — Valmiki Ramayana</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-section" id="location">
+  <div class="sec-header" style="padding-top:0;">
+    <div class="sec-title">Temple Location & Directions</div>
+    <div class="sec-title-kn">ದೇವಾಲಯದ ಸ್ಥಳ ಮತ್ತು ದಿಕ್ಕು</div>
+    <div class="ornament"></div>
+  </div>
+
+  <div style="text-align:center; margin-bottom:16px;">
+    <a class="map-btn" href="https://maps.google.com/?q=Sugaturu,Kolar+Taluk,Karnataka,India" target="_blank">
+      📍 Open in Google Maps — Navigate to Sugaturu
+    </a>
+  </div>
+
+  <div class="map-container" style="max-width:900px; margin:0 auto;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15562.897!2d78.1293!3d13.1367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad1e3c17e7b0e1%3A0x1234567890abcdef!2sSugaturu%2C%20Karnataka%20563101!5e0!3m2!1sen!2sin!4v1708800000000!5m2!1sen!2sin"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      title="Sugaturu Location Map">
+    </iframe>
+    <div class="map-info">
+      <div class="map-info-item">
+        <div class="map-info-icon">🛕</div>
+        <div class="map-info-text">
+          <h4>Temple</h4>
+          <p>Sri Kodanda Ramaswami Devara Temple<br>Sugaturu Village, Kolar Taluk<br>Karnataka 563101</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">🚌</div>
+        <div class="map-info-text">
+          <h4>By Bus</h4>
+          <p>KSRTC buses from Kolar Town to Sugaturu. Kolar is ~80 km from Bengaluru via KGF Road.</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">🚗</div>
+        <div class="map-info-text">
+          <h4>By Road</h4>
+          <p>Bengaluru → Hoskote → Kolar → Sugaturu (~85 km, ~2 hrs). Auto/Taxi available from Kolar.</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">🚂</div>
+        <div class="map-info-text">
+          <h4>By Train</h4>
+          <p>Nearest station: Kolar (KGF area). Then auto/bus to Sugaturu village.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO SECTION -->
+<section class="info-section" id="info">
+  <div class="sec-header" style="padding-top:0;">
+    <div class="sec-title">Festival Information</div>
+    <div class="sec-title-kn">ಮಹೋತ್ಸವ ಮಾಹಿತಿ</div>
+    <div class="ornament"></div>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-icon">📅</div>
+      <h3>Dates</h3>
+      <p>25 February to 09 March 2026<br>13 Days of Celebrations<br>Phalguna Navami to Shashti</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🎡</div>
+      <h3>Grand Chariot</h3>
+      <p>Brahmarathotsava<br>03 March 2026 · 11:00 AM<br>Karnataka Govt. Sponsored</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🏹</div>
+      <h3>Grand Finale</h3>
+      <p>Ravana Vahanotsava<br>09 March 2026 · 9:00 PM<br>Triumph of Dharma over Evil</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🙏</div>
+      <h3>Chief Priest</h3>
+      <p>Pradhan Archakaru:<br>Sri Rameshababu, Sugaturu<br>Agamikaru: A.P. Ramanath Deekshitaru</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">🎭</div>
+      <h3>Cultural Program</h3>
+      <p>Gonasaami International Folk Artists, Bengaluru<br>Rashamanjari Program</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">📞</div>
+      <h3>Contact</h3>
+      <p>Sri Koodandramaswami<br>Bhaktha Mandali<br>📱 9741072009</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card-icon">📞</div>
+      <h3>Developed by</h3>
+      <p>Prajwal Gowda<br>📱 9739493438</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">ಶ್ರೀ ಕೋದಂಡ ರಾಮಸ್ವಾಮಿ ದೇವರ ಜಾತ್ರಾ ಮಹೋತ್ಸವ 2026</div>
+  <div class="footer-sub">Brahmarathotsava · Sugaturu · Kolar Taluk · Karnataka</div>
+  <div class="footer-divider"></div>
+  <p class="footer-info">
+    ಶ್ರೀ ಕೂದಂಡರಾಮಸ್ವಾಮಿ ಭಕ್ತ ಮಂಡಳಿ ಹಾಗೂ ಸುಗಟೂರು ಗ್ರಾಮಸ್ಥರು<br>
+    Organized by Sri Koodandramaswami Bhaktha Mandali & Sugaturu Graamastharu<br>
+    📞 9741072009
+  </p>
+  <div class="footer-divider"></div>
+  <p class="footer-mantra">"ರಾಮೋ ವಿಗ್ರಹವಾನ್ ಧರ್ಮಃ" — Rama is the embodiment of Dharma 🙏</p>
+</footer>
+
+<script>
+
+// ===== SWIPER =====
+const track = document.getElementById('swiperTrack');
+const slides = track.querySelectorAll('.day-slide');
+const total = slides.length;
+const dotsContainer = document.getElementById('dotsContainer');
+const counter = document.getElementById('current-slide');
+let current = 0;
+
+// Build dots
+slides.forEach((_, i) => {
+  const d = document.createElement('button');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goTo(i);
+  dotsContainer.appendChild(d);
+});
+
+function updateDots() {
+  dotsContainer.querySelectorAll('.dot').forEach((d,i) => {
+    d.classList.toggle('active', i === current);
+  });
+  counter.textContent = current + 1;
+}
+
+function goTo(index) {
+  current = Math.max(0, Math.min(index, total - 1));
+  const slide = slides[current];
+  const slideLeft = slide.offsetLeft;
+  const trackWidth = track.offsetWidth;
+  const slideWidth = slide.offsetWidth;
+  const scrollTo = slideLeft - (trackWidth / 2) + (slideWidth / 2);
+  track.scrollTo({ left: scrollTo, behavior: 'smooth' });
+  updateDots();
+}
+
+window.slideNav = function(dir) { goTo(current + dir); };
+
+// Auto-detect current slide on scroll
+track.addEventListener('scroll', () => {
+  const center = track.scrollLeft + track.offsetWidth / 2;
+  let closest = 0, minDist = Infinity;
+  slides.forEach((s, i) => {
+    const dist = Math.abs(s.offsetLeft + s.offsetWidth / 2 - center);
+    if (dist < minDist) { minDist = dist; closest = i; }
+  });
+  if (closest !== current) { current = closest; updateDots(); }
+});
+
+// Touch/drag swipe
+let isDown = false, startX, scrollLeft;
+track.addEventListener('mousedown', e => { isDown = true; track.classList.add('grabbing'); startX = e.pageX - track.offsetLeft; scrollLeft = track.scrollLeft; });
+track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('grabbing'); });
+track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('grabbing'); });
+track.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') slideNav(-1);
+  if (e.key === 'ArrowRight') slideNav(1);
+});
+
+// Initial position
+setTimeout(() => goTo(0), 100);
+</script>
+</body>
+</html>
